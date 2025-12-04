@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karim Ahmed Fawzy - CV</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+    body {
+        margin:0;
+        padding:0;
+        font-family: 'Consolas', 'Courier New', monospace;
+        background:#000308;
+        color:#fff;
+        overflow-x:hidden;
+        position: relative;
+        min-height: 100vh;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out 0.5s forwards;
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewport="0 0 100 100" style="fill:black;font-size:18px;"><text y="50%">💻</text></svg>') 4 12, auto;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .stardust {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+        background-image: radial-gradient(#00ffff 1px, transparent 0),
+                          radial-gradient(#3c00ff 1px, transparent 0);
+        background-size: 50px 50px;
+        opacity: 0.2;
+        animation: stardustPan 100s linear infinite;
+    }
+
+    @keyframes stardustPan { from { background-position: 0 0; } to { background-position: 5000px 5000px; } }
+
+    .container {
+        width:90%;
+        margin:auto;
+        padding:40px 20px;
+        display:flex;
+        flex-wrap:wrap;
+        gap:25px;
+        justify-content:center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border:1px solid rgba(0, 255, 255, 0.4);
+        border-radius:15px;
+        padding:25px;
+        width:320px;
+        box-shadow:0 0 25px rgba(0, 255, 255, 0.2);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+        position:relative;
+    }
+
+    .card:hover {
+        transform: scale(1.08);
+    }
+
+    .section-title {
+        font-size:26px;
+        color: #00ffff;
+        text-shadow:0 0 15px #00ffff;
+        margin-bottom:20px;
+        padding-bottom: 5px;
+        letter-spacing: 2px;
+    }
+
+    .glitch-text { 
+        color:#fff; /* الغيت تأثير glitch */
+    }
+
+    img.profile {
+        width:300px;
+        height:300px;
+        border-radius:50%; /* مستدير بالكامل */
+        box-shadow:0 0 35px #00ffff;
+        border: 3px solid #0685b8; 
+        transition:0.4s;
+    }
+
+    img.profile:hover {
+        transform: scale(1.05);
+        box-shadow:0 0 50px #00ffff, 0 0 80px #ff00ff;
+    }
+
+    .hobbies {
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+    }
+    .hobbies span {
+        padding:5px 10px;
+        background: rgba(38, 0, 255, 0.1);
+        color: #003cff;
+        border: 1px solid #0004ff;
+        transition:0.3s;
+        border-radius:8px;
+    }
+    .hobbies span:hover {
+        transform:scale(1.15) rotate(-3deg);
+        box-shadow:0 0 25px #050a94;
+        background: rgba(29, 4, 128, 0.3);
+    }
+
+    ul { list-style:none; padding:0; }
+    li { margin:5px 0; }
+    .social a { display:inline-block; margin:5px; font-size:20px; transition:0.3s; }
+    .social a:hover { opacity:0.8; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .card { width: 90%; }
+        img.profile { width:200px; height:200px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="stardust"></div>
+
+<div class="container">
+    <!-- Header / Profile -->
+    <div class="card" style="flex-basis:82%; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+        <img src="n/kareem.jpg" alt="Profile Picture" class="profile">
+        <div style="flex:1;">
+            <div class="section-title">
+                <h1 class="glitch-text">𓄂 KEMØ 𓆪 𖤍⠀❖</h1>
+            </div>
+            <h3 id="typing-text"></h3>
+            <p>Cyber Security Enthusiast · 19 🥀 · Menoufia - Ashmoun - Egypt</p>
+        </div>
+    </div>
+
+    <!-- Education & Courses -->
+    <div class="card">
+        <div class="section-title">🎓Education&Courses</div>
+        <ul>
+            <li><i class="fas fa-graduation-cap" style="color:#00ffff; margin-right:8px;"></i> Information Technology (Networks)</li>
+            <li><i class="fas fa-certificate" style="color:#ff00ff; margin-right:8px;"></i> CCNA Security Certification</li>
+            <li><i class="fas fa-code" style="color:#00ff00; margin-right:8px;"></i> C / C++</li>
+            <li><i class="fab fa-python" style="color:#ffd700; margin-right:8px;"></i> Python</li>
+            <li><i class="fas fa-laptop-code" style="color:#ff4500; margin-right:8px;"></i> IT</li>
+            <li><i class="fab fa-html5" style="color:#ff6347; margin-right:8px;"></i> HTML / CSS / JS</li>
+            <li><i class="fas fa-book" style="color:#00ffff; margin-right:8px;"></i> CS50</li>
+            <li><i class="fas fa-shield-alt" style="color:#1e90ff; margin-right:8px;"></i> Cybersecurity</li>
+            <li><i class="fas fa-microchip" style="color:#adff2f; margin-right:8px;"></i> IoT and Arduino Projects</li>
+            <li><i class="fas fa-database" style="color:#ff1493; margin-right:8px;"></i> Databases</li>
+            <li><i class="fas fa-cogs" style="color:#00fa9a; margin-right:8px;"></i> Digital Engineering</li>
+            <li><i class="fas fa-file-word" style="color:#1e90ff; margin-right:8px;"></i> Microsoft Office (Word, Excel)</li>
+        </ul>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="card">
+        <div class="section-title">💻Technical Skills</div>
+        <ul>
+            <li><i class="fas fa-network-wired" style="color:#00ffff; margin-right:8px;"></i> Network Security (LAN/WAN Setup)</li>
+            <li><i class="fas fa-shield-alt" style="color:#ff4500; margin-right:8px;"></i> Firewall Configuration</li>
+            <li><i class="fas fa-certificate" style="color:#ff00ff; margin-right:8px;"></i> CCNA Security Knowledge</li>
+            <li><i class="fas fa-project-diagram" style="color:#1e90ff; margin-right:8px;"></i> Network Simulation</li>
+            <li><i class="fas fa-code" style="color:#00ff00; margin-right:8px;"></i> Programming: C, C++, Python, HTML/CSS/JS</li>
+            <li><i class="fas fa-microchip" style="color:#adff2f; margin-right:8px;"></i> IoT Programming</li>
+        </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="card">
+        <div class="section-title">⚙️Projects/Systems</div>
+        <ul>
+            <li><i class="fas fa-university" style="color:#00ffff; margin-right:8px;"></i> Banking System / ATM System</li>
+            <li><i class="fas fa-globe" style="color:#ff4500; margin-right:8px;"></i> Website Development (I designed this website)</li>
+            <li><i class="fas fa-home" style="color:#ff00ff; margin-right:8px;"></i> Smart Home Automation with IoT Technology</li>
+            <li><i class="fas fa-network-wired" style="color:#1e90ff; margin-right:8px;"></i> Network Security Lab Simulation</li>
+            <li><i class="fas fa-microchip" style="color:#adff2f; margin-right:8px;"></i> IoT Sensor Monitoring System</li>
+            <li><i class="fas fa-tasks" style="color:#ff6347; margin-right:8px;"></i> Small Projects</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="card">
+        <div class="section-title">Hobbies & Interests</div>
+        <div class="hobbies">
+            <span>Gaming 🎮</span>
+            <span>Watching Anime 🎬</span>
+            <span>Tech Exploration 🖥️</span>
+            <span>Networking Projects 🌐</span>
+            <span>Programming / Coding 💻</span>
+            <span>Reading / Self-learning 📚</span>
+        </div>
+    </div>
+
+    <!-- Social Links -->
+    <div class="card">
+        <div class="section-title">Social Links</div>
+        <div class="social">
+            <a href="https://www.facebook.com/krieem.ahmed"><i class="fab fa-facebook" style="color:#1877F2;"></i></a>
+            <a href="https://www.linkedin.com/in/kariem-ahmed-749553358/"><i class="fab fa-linkedin" style="color:#0A66C2;"></i></a>
+            <a href="https://www.instagram.com/kemo_maser"><i class="fab fa-instagram" style="color:#E1306C;"></i></a>
+            <a href="https://www.threads.net/@kemo_maser"><i class="fab fa-threads" style="color:#ffffff;"></i></a>
+            <a href="https://t.me/01032751749"><i class="fab fa-telegram" style="color:#0088cc;"></i></a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+        <div class="section-title">Contact</div>
+        <ul class="contact">
+            <li><i class="fas fa-phone" style="color:#00ffff; margin-right:8px;"></i>01032751749 / 01067450133</li>
+            <li><i class="fab fa-whatsapp" style="color:#25D366; margin-right:8px;"></i>01032751749</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    const typingTextElement = document.getElementById('typing-text');
+    const textToType = "Kareem Ahmed Fawzy | Network & Cyber Security Analyst";
+    let index = 0;
+    function type() {
+        if (index < textToType.length) {
+            typingTextElement.innerHTML += textToType.charAt(index);
+            index++;
+            setTimeout(type, 80);
+        } else {
+            typingTextElement.style.animation = 'blink 1s step-end infinite';
+        }
+    }
+    const style = document.createElement('style');
+    style.innerHTML = `@keyframes blink { from, to { border-color: transparent } 50% { border-color: #ff00ff; } }`;
+    document.head.appendChild(style);
+    window.onload = function() { setTimeout(type, 1500); };
+</script>
+
+</body>
+</html>
